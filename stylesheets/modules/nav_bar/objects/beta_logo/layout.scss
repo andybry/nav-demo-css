@@ -1,0 +1,27 @@
+@mixin generate-beta-logo-layout(
+  $mobileMax,
+  $nav-bar-h,
+  $beta-logo-w,
+  $beta-logo-slant-w
+) {
+  %l-beta-logo {
+    @extend %center;
+    display: block;
+    position: relative;
+    float: left;
+    width: $beta-logo-w;
+    height: $nav-bar-h;
+    @media(max-width: $mobileMax) {
+      display: none;
+    };
+  }
+  %l-beta-logo-slant {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: -$beta-logo-slant-w;
+    float: right;
+    border-top-width: $nav-bar-h;
+    border-right-width: $beta-logo-slant-w;
+  }
+}

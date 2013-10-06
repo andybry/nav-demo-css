@@ -1,0 +1,5 @@
+@mixin generate-logo-skin($logo-bi) {
+  %s-logo {
+    background-image: $logo-bi;
+  }
+}

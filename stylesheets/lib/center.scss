@@ -1,0 +1,26 @@
+%center-horizontally {
+  text-align: center;
+  > * {
+    display: inline-block;
+  }
+}
+
+%center-vertically {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+%center {
+  @extend %center-horizontally;
+  @extend %center-vertically;
+}
+

@@ -1,0 +1,23 @@
+@import "objects/nav_bar/skin";
+@import "objects/logo/skin";
+@import "objects/beta_logo/skin";
+@import "objects/hierarchy_element/skin";
+@import "objects/hierarchy_element_last/skin";
+
+@mixin generate-nav-bar-skins(
+  $nav-bar-bc: #2d353d,
+  $nav-bar-c: white,
+  $beta-logo-bc: #75909d,
+  $image-base-url: $image-base-url,
+  $logo-bi-file: 'logo-sprite.png'
+) {
+  $logo-bi: url("#{$image-base-url}/#{$logo-bi-file}");
+  @include generate-nav-bar-skin($nav-bar-bc);
+  @include generate-logo-skin($logo-bi);
+  @include generate-beta-logo-skin(
+    $beta-logo-bc: $beta-logo-bc,
+    $nav-bar-c: $nav-bar-c
+  );
+  @include generate-hierarchy-element-skin($nav-bar-c);
+  @include generate-hierarchy-element-last-skin();
+}

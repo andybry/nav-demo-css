@@ -1,0 +1,4 @@
+sass \
+  --compass \
+  --style compressed \
+  stylesheets/main.scss:style.css

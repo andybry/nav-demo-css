@@ -1,0 +1,5 @@
+@mixin generate-hierarchy-element-last-skin {
+  %s-hierarchy-element-last {
+    @extend %s-hierarchy-element;
+  };
+}

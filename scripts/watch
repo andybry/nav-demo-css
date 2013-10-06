@@ -1,0 +1,1 @@
+sass --compass --watch stylesheets/main.scss:style.css

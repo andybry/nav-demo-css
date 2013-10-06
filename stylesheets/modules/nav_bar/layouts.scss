@@ -1,0 +1,33 @@
+@import "objects/nav_bar/layout";
+@import "objects/logo/layout";
+@import "objects/beta_logo/layout";
+@import "objects/hierarchy/layout";
+@import "objects/hierarchy_element/layout";
+@import "objects/hierarchy_element_last/layout";
+
+@mixin generate-nav-bar-layouts(
+  $mobileMax: $mobileMax,
+  $tabletMin: $mobileMax,
+  $nav-bar-h: 50px,
+  $logo-w: 79px,
+  $beta-logo-w: $logo-w,
+  $beta-logo-slant-w: 15px
+) {
+  @include generate-nav-bar-layout($nav-bar-h);
+  @include generate-logo-layout(
+    $logo-w: $logo-w, 
+    $nav-bar-h: $nav-bar-h
+  );
+  @include generate-beta-logo-layout(
+    $mobileMax: $mobileMax,
+    $nav-bar-h: $nav-bar-h,
+    $beta-logo-w: $beta-logo-w,
+    $beta-logo-slant-w: $beta-logo-slant-w
+  );
+  @include generate-hierarchy-layout(
+    $nav-bar-h: $nav-bar-h,
+    $beta-logo-slant-w: $beta-logo-slant-w
+  );
+  @include generate-hierarchy-element-layout($mobileMax);
+  @include generate-hierarchy-element-last-layout();
+}

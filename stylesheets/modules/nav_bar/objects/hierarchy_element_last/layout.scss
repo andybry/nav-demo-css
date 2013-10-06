@@ -1,0 +1,6 @@
+@mixin generate-hierarchy-element-last-layout {
+  %l-hierarchy-element-last {
+    @extend %l-hierarchy-element;
+    border-right-width: 0px;
+  };
+}

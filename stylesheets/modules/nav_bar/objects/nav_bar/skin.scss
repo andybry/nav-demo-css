@@ -1,0 +1,5 @@
+@mixin generate-nav-bar-skin($nav-bar-bc) {
+  %s-nav-bar {
+    background-color: $nav-bar-bc;
+  }
+}

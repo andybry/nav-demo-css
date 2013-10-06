@@ -1,0 +1,12 @@
+@mixin generate-hierarchy-layout(
+  $nav-bar-h,
+  $beta-logo-slant-w
+) {
+  %l-hierarchy {
+    position: relative;
+    left: $beta-logo-slant-w;
+    float: left;
+    height: $nav-bar-h;
+    line-height: $nav-bar-h;
+  }
+}
