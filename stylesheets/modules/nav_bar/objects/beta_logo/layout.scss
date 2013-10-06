@@ -4,6 +4,15 @@
   $beta-logo-w,
   $beta-logo-slant-w
 ) {
+  %l-beta-logo-slant {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: -$beta-logo-slant-w;
+    float: right;
+    border-top-width: $nav-bar-h;
+    border-right-width: $beta-logo-slant-w;
+  }
   %l-beta-logo {
     @extend %center;
     display: block;
@@ -14,14 +23,10 @@
     @media(max-width: $mobileMax) {
       display: none;
     };
+    &:after {
+      @extend %l-beta-logo-slant;
+      content: "";
+    }
   }
-  %l-beta-logo-slant {
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: -$beta-logo-slant-w;
-    float: right;
-    border-top-width: $nav-bar-h;
-    border-right-width: $beta-logo-slant-w;
-  }
+
 }

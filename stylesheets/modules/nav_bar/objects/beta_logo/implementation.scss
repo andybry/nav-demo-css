@@ -1,9 +1,4 @@
 .beta-logo {
   @extend %l-beta-logo;
   @extend %s-beta-logo;
-  &:after {
-    @extend %l-beta-logo-slant;
-    @extend %s-beta-logo-slant;
-    content: "";
-  }
 }

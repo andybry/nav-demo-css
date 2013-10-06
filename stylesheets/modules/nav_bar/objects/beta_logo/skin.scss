@@ -2,11 +2,6 @@
   $beta-logo-bc,
   $nav-bar-c
 ) {
-  %s-beta-logo {
-    background-color: $beta-logo-bc;
-    color: $nav-bar-c;
-    text-transform: uppercase;
-  }
   %s-beta-logo-slant {
     border-top: {
       color: $beta-logo-bc; 
@@ -15,6 +10,14 @@
     border-right: {
       color: transparent; 
       style: solid;
+    }
+  }
+  %s-beta-logo {
+    background-color: $beta-logo-bc;
+    color: $nav-bar-c;
+    text-transform: uppercase;
+    &:after {
+      @extend %s-beta-logo-slant;
     }
   }
 }
