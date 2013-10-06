@@ -1,5 +1,8 @@
-@mixin generate-nav-bar-layout($nav-bar-h) {
-  %l-nav-bar {
+@mixin generate-nav-bar-layout(
+  $nav-bar-h,
+  $name: 'l-nav-bar'
+) {
+  %#{$name} {
     display: block;
     height: $nav-bar-h;
   }

@@ -1,5 +1,9 @@
-@mixin generate-logo-layout($logo-w, $nav-bar-h) {
-  %l-logo {
+@mixin generate-logo-layout(
+  $logo-w, 
+  $nav-bar-h,
+  $name: 'l-logo'
+) {
+  %#{$name} {
     display: block;
     float: left;
     width: $logo-w;

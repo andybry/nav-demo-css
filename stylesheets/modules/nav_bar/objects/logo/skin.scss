@@ -1,5 +1,8 @@
-@mixin generate-logo-skin($logo-bi) {
-  %s-logo {
+@mixin generate-logo-skin(
+  $logo-bi,
+  $name: 's-logo'
+) {
+  %#{s-logo} {
     background-image: $logo-bi;
   }
 }

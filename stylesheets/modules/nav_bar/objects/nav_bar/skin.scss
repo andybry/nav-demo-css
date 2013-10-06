@@ -1,5 +1,8 @@
-@mixin generate-nav-bar-skin($nav-bar-bc) {
-  %s-nav-bar {
+@mixin generate-nav-bar-skin(
+  $nav-bar-bc,
+  $name: 's-nav-bar'
+) {
+  %#{$name} {
     background-color: $nav-bar-bc;
   }
 }

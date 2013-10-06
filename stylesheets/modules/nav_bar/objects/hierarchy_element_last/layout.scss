@@ -1,6 +1,8 @@
-@mixin generate-hierarchy-element-last-layout {
-  %l-hierarchy-element-last {
-    @extend %l-hierarchy-element;
+@mixin generate-hierarchy-element-last-layout(
+  $name_of_hierarchy_element: 'l-hierarchy-element'
+) {
+  %#{$name_of_hierarchy_element}-last {
+    @extend %#{$name_of_hierarchy_element};
     border-right-width: 0px;
   };
 }

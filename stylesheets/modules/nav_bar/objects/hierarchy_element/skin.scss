@@ -1,5 +1,8 @@
-@mixin generate-hierarchy-element-skin($nav-bar-c) {
-  %s-hierarchy-element {
+@mixin generate-hierarchy-element-skin(
+  $nav-bar-c,
+  $name: 's-hierarchy-element'
+) {
+  %#{$name} {
     color: $nav-bar-c;
     border-right-style: solid;
     border-right-color: $nav-bar-c;

@@ -2,9 +2,10 @@
   $mobileMax,
   $nav-bar-h,
   $beta-logo-w,
-  $beta-logo-slant-w
+  $beta-logo-slant-w,
+  $name: 'l-beta-logo'
 ) {
-  %l-beta-logo-slant {
+  %#{$name}-slant {
     display: block;
     position: absolute;
     top: 0px;
@@ -13,7 +14,7 @@
     border-top-width: $nav-bar-h;
     border-right-width: $beta-logo-slant-w;
   }
-  %l-beta-logo {
+  %#{$name} {
     @extend %center;
     display: block;
     position: relative;
@@ -24,7 +25,7 @@
       display: none;
     };
     &:after {
-      @extend %l-beta-logo-slant;
+      @extend %#{$name}-slant;
       content: "";
     }
   }
