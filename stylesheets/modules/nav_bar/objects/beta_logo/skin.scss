@@ -1,8 +1,9 @@
 @mixin generate-beta-logo-skin(
   $beta-logo-bc,
-  $nav-bar-c
+  $nav-bar-c,
+  $name: 's-beta-logo'
 ) {
-  %s-beta-logo-slant {
+  %#{$name}-slant {
     border-top: {
       color: $beta-logo-bc; 
       style: solid;
@@ -12,12 +13,12 @@
       style: solid;
     }
   }
-  %s-beta-logo {
+  %#{$name} {
     background-color: $beta-logo-bc;
     color: $nav-bar-c;
     text-transform: uppercase;
     &:after {
-      @extend %s-beta-logo-slant;
+      @extend %#{$name}-slant;
     }
   }
 }
