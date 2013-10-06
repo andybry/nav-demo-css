@@ -1,7 +1,6 @@
 @mixin generate-nav-bar-layout($nav-bar-h) {
   %l-nav-bar {
     display: block;
-    width: 100%;
     height: $nav-bar-h;
   }
 }
